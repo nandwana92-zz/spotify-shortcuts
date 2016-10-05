@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Spotify Shortcuts",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Keyboard shortcuts for Spotify web player",
+    "description": "The description of the application"
+  }
+}

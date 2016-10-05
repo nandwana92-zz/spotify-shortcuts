@@ -1,0 +1,59 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://play.spotify.com/*"
+      ],
+      "js": [
+        "scripts/element-ready.js",
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "commands": {
+    "search": {
+      "suggested_key": {
+        "default": "Ctrl+S"
+      },
+      "description": "Show Search"
+    },
+    "playPause": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2"
+      },
+      "global": true,
+      "description": "Toggle Play Pause"
+    },
+    "open": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "global": true,
+      "description": "Open Spotify"
+    },
+    "previous": {
+      "global": true,
+      "description": "Previous Track"
+    },
+    "next": {
+      "global": true,
+      "description": "Next Track"
+    }
+  },
+  "permissions": ["tabs"]
+}
